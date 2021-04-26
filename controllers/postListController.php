@@ -26,7 +26,8 @@
     	
     }
 
-    $categories = getAllCategories();
+		$categories = getAllCategories();
+		$latestPosts = getLatestPosts();
 
     $view = 'views/postListView.php';
 

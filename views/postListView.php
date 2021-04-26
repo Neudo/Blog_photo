@@ -22,6 +22,4 @@
         <p>Aucun article pour le moment...</p>
     <?php endif; ?>
 
-
-
-    <?php getLatestPosts();?>
+    <?= $latestPosts;?>
