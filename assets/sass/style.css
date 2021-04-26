@@ -1,0 +1,195 @@
+body {
+  color: white;
+  background: black;
+  font-family: "Palanquin", sans-serif;
+}
+
+.cover-pic {
+  position: absolute;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+main {
+  margin-top: 170px;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  max-width: 100%;
+  margin: 15px;
+}
+
+.logo img {
+  position: absolute;
+  width: 7vw;
+  left: 50px;
+  top: 20px;
+}
+
+a {
+  text-decoration: none;
+  margin-right: 35px;
+  color: white;
+  font-size: 24px;
+  position: relative;
+}
+
+.slide-line::before {
+  content: "";
+  background: white;
+  position: absolute;
+  top: 30px;
+  width: 100%;
+  height: 3px;
+  transform-origin: 100% 0;
+  transform: scaleX(0);
+  transition: transform 0.5s;
+}
+
+.slide-line:hover::before {
+  transform-origin: 0 0;
+  transform: scaleX(1);
+}
+
+.container-contact {
+  display: flex;
+  max-width: 95%;
+  margin: auto;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 10px;
+}
+
+.firstname-form,
+.lastname-form,
+.email-form {
+  width: 25%;
+  height: 35px;
+}
+
+.object-form {
+  width: 55%;
+  height: 35px;
+}
+
+.content-form {
+  width: 100%;
+  height: 315px;
+}
+
+.send-form {
+  margin-top: 10px;
+  border: 2px #707070 solid;
+  background-color: black;
+  color: white;
+  font-size: 60px;
+  width: 15%;
+}
+
+input,
+textarea {
+  border: none;
+  background: #707070;
+  color: white;
+}
+
+.succes {
+  color: green;
+}
+
+.bio {
+  width: 30vw;
+  font-size: 1.7vw;
+  line-height: 1.4em;
+  justify-content: center;
+  font-weight: bold;
+  display: block;
+  margin: auto;
+  margin-top: 2.5vw;
+}
+
+.bio-container {
+  margin-top: 12vw;
+}
+
+.title {
+  font-size: 3vw;
+  text-align: center;
+  padding: 5vw;
+}
+
+.bio-title {
+  font-size: 2vw;
+  width: 85%;
+  text-align: center;
+  justify-content: center;
+  position: absolute;
+  top: 67vw;
+  left: 7%;
+}
+
+.img-bio {
+  margin-left: 50%;
+  display: flex;
+  position: relative;
+}
+
+.container-404 {
+  display: flex;
+  width: 100%;
+}
+
+.text-404-1 {
+  font-size: 250px;
+  width: 65%;
+  margin-left: 3%;
+}
+
+.text-404-2 {
+  font-size: 250px;
+}
+
+.slide-link {
+  color: white;
+  font-size: 30px;
+  overflow: hidden;
+  position: relative;
+}
+
+.slide-link span {
+  padding: 10px;
+  display: inline-block;
+  transition: transform 0.3s ease-out;
+}
+
+.slide-link span:nth-child(2) {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  left: 100%;
+}
+
+.slide-link:hover span {
+  transform: translateX(-100%);
+}
+
+.container-backhome {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin: 3%;
+}
+
+.contact-text {
+  max-width: 1200px;
+  font-size: 40px;
+  margin-bottom: 150px;
+  margin-left: 48px;
+}

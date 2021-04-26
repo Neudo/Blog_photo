@@ -1,0 +1,1 @@
+<img class="cover-pic" src="assets/img/various/main-pic.jpeg" alt="">

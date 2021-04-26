@@ -1,0 +1,1 @@
+<span class="admin-mode">Mode administration du site. </span>
