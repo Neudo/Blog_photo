@@ -104,8 +104,14 @@ if($action == 'register') {
       $_SESSION['message'] = '<span class="succes">Inscription réussie ! Vous pouvez maintenant vous connecter.</span>';
     }
   }
-
   $view = 'views/registerView.php';
+}
+
+if($action == 'edit') {
+  $submittedPseudo = $_POST['pseudo'];
+
+  $view = 'views/userInfosView.php';
+
 }
 
 ?>

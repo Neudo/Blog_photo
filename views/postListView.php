@@ -10,10 +10,9 @@
 
     <div class="container-latest-posts">
         <?php if(count($posts) > 0): ?>
-            <?php for($posts as $post): ?>
+            <?php foreach($posts as $post): ?>
             <article>
                 <a href="index.php?page=post&id=<?=$post['id']; ?>">
-                <img src="../assets/img/posts/<?= $selectedPost['img'];?>" alt="<?=$selectedPost['title'];?>"> 
                 <h2><?= $post['title']; ?></h2>
                     <span><?= dateConverter($post['date']); ?></span>
                     <div><?= $post['summary']; ?></div>

@@ -13,6 +13,10 @@ if(isset($_GET['page'])){
             require_once('controllers/postListController.php');
             break;
 
+        case 'gallery' :
+            require_once('controllers/galleryController.php');
+        break;
+
         case 'post' : 
             require_once('controllers/postController.php');
             break;

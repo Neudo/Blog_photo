@@ -26,7 +26,6 @@
     	$posts = getAllPosts();
     	
 		}
-		$selectedPost = getPost($postId);
 		$categories = getAllCategories();
 		$latestPosts = getLatestPosts();
 
