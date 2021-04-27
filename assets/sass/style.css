@@ -193,3 +193,7 @@ textarea {
   margin-bottom: 150px;
   margin-left: 48px;
 }
+
+.vertical {
+  writing-mode: vertical-rl;
+}

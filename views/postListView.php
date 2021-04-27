@@ -4,7 +4,7 @@
             <p><?= $selectedCategory['description'] ?></p>
             <img src="assets/img/categories/<?= $selectedCategory['img'];?>" alt="<?=$selectedCategory['name'];?>">
         <?php else: ?>
-            <h1>Derniers articles</h1>
+            <h3 class="vertical">Derniers articles</h3>
         <?php endif; ?>
     </header>
 
@@ -21,5 +21,3 @@
     <?php else: ?>
         <p>Aucun article pour le moment...</p>
     <?php endif; ?>
-
-    <?= $latestPosts;?>
