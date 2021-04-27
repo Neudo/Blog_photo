@@ -1,4 +1,8 @@
-<h3>Accroc Macro Photo </h3>
+<div class="category-title vertical">
+  <h3>Accroc</h3>
+  <h3>Macro Photo </h3>
+</div>
+
 
   <p class="category-name">
     Fleurs / Insectes / Eau / Peinture

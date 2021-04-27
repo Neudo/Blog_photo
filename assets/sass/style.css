@@ -201,3 +201,29 @@ textarea {
 .container-latest-posts {
   display: flex;
 }
+
+.category-title {
+  font-size: 80px;
+  width: 15%;
+  text-align: center;
+  position: fixed;
+}
+
+.category-name {
+  position: fixed;
+  top: 80%;
+  left: 5%;
+  font-size: 50px;
+  width: 24%;
+}
+
+.container-gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.container-gallery img {
+  width: 40%;
+  margin: 0 10% 10% 0;
+}
