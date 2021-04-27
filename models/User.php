@@ -1,13 +1,14 @@
 <?php
 
-function newUser($submittedPseudo, $submittedEmail, $submittedPassword) {
+function newUser($submittedPseudo, $submittedEmail, $submittedPassword, $submittedBio) {
   $db = dbConnect();
 
-  $query = $db->prepare('INSERT INTO users (pseudo, email, password) VALUES (?, ?, ?)');
+  $query = $db->prepare('INSERT INTO users (pseudo, email, bio, password) VALUES (?, ?, ?, ?)');
   $result = $query->execute(
     [
       $submittedPseudo,
       $submittedEmail,
+      $submittedBio,
       password_hash($submittedPassword, PASSWORD_DEFAULT)
     ]
     );
@@ -41,6 +42,15 @@ function getAllUsers(){
   $users = $query->fetchAll();
   return $users;
 }
+
+function getPseudo(){
+  $db = dbConnect();
+  $query = $db->query("SELECT pseudo FROM users");
+
+  $pseudo = $query->fetchAll();
+  return $pseudo;
+}
+
 
 function getUser($userId){
   $db = dbConnect();

@@ -197,3 +197,7 @@ textarea {
 .vertical {
   writing-mode: vertical-rl;
 }
+
+.container-latest-posts {
+  display: flex;
+}

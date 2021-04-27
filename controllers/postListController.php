@@ -7,8 +7,9 @@
 
     if(isset($_GET['category_id'])){
 
-
-    	$categoryId = $_GET['category_id'];
+			$categoryId = $_GET['category_id'];
+			$postId = $_GET['id'];
+			
 
 
     	$selectedCategory = getCategory($categoryId);
@@ -18,14 +19,14 @@
 	    	exit;
 	    }
 
-    	$posts = getPostsByCategoryId($categoryId);
+			$posts = getPostsByCategoryId($categoryId);
     }
     else{
       
     	$posts = getAllPosts();
     	
-    }
-
+		}
+		$selectedPost = getPost($postId);
 		$categories = getAllCategories();
 		$latestPosts = getLatestPosts();
 

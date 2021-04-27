@@ -2,7 +2,7 @@
 
 <form action="" method="POST">
 
-  <label for="">Pseudo : </label>
+  <label for="pseudo">Pseudo : </label>
   <input type="text" name="pseudo" id="pseudo" value="<?= isset($submittedPseudo) ? $submittedPseudo : "" ?>"> <br>
 
   <label for="email">Email : </label>
@@ -13,6 +13,9 @@
 
   <label for="password">Confirmez le mot de passe :</label>
   <input type="password" name="password-confirmation" id="password-confirmation" value=""> <br>
+
+  <label for="bio">Biographie :</label>
+  <textarea name="bio" id="bio" cols="30" rows="5"></textarea>
 
   <button>S'inscrire</button>
 

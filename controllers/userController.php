@@ -71,19 +71,21 @@ if($action == 'register') {
     $submittedEmail = $_POST['email'];
     $submittedPassword = $_POST['password'];
     $submittedPasswordConfirmation = $_POST['password-confirmation'];
+    $submittedBio = $_POST['bio'];
+    $pseudo = getPseudo();
 
     if(empty($submittedPseudo)) {
       $errors[] =  'merci de renseigner votre Pseudo.';
     }
-    // elseif($submittedPseudo == $pseudo) {
-    //   $errors[] = 'adresse email déjà utilisée.';
-    // }
+    elseif($submittedPseudo == $pseudo) {
+      $errors[] = 'adresse email déjà utilisée.';
+    }
 
     if(empty($submittedEmail)) {  
       $errors[] = 'merci de renseigner votre email.';
     }
     elseif(!checkEmailFormat($submittedEmail)){
-      $errors[] = 'merci d\'enter une email valide';
+      $errors[] = 'merci d\'enter une email valide.';
     } 
 
     if(empty($submittedPassword)) {
@@ -93,8 +95,12 @@ if($action == 'register') {
       $errors[] = 'merci de saisir le même mot de passe !';
     }
 
+    if(empty($submittedBio)) {
+      $errors [] = 'merci de remplir votre biographie.';
+    }
+
     if(empty($errors)) {
-      $creatUser = newUser($submittedPseudo, $submittedEmail, $submittedPassword);
+      $creatUser = newUser($submittedPseudo, $submittedEmail, $submittedBio, $submittedPassword);
       $_SESSION['message'] = '<span class="succes">Inscription réussie ! Vous pouvez maintenant vous connecter.</span>';
     }
   }
