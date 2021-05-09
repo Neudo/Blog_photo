@@ -10,7 +10,7 @@
 
     <div class="container-latest-posts">
         <?php if(count($posts) > 0): ?>
-            <?php foreach($posts as $post): ?>
+            <?php foreach($latestPosts as $post): ?>
             <article>
                 <a href="index.php?page=post&id=<?=$post['id']; ?>">
                 <img src="assets/img/posts/<?= $selectedPost['img'];?>" alt="<?=$selectedPost['title'];?>"> 
