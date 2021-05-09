@@ -19,6 +19,9 @@
     }
     
     $categories = getAllCategories();
+    $postId = $_GET['id'];
+    $selectedPost = getPost($postId);
+
 
     $view = 'views/postView.php';
     
