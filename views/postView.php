@@ -1,4 +1,3 @@
-<h3>Catégorie : <?= $post['name']; ?> </h3> <br>
 
 <img src="assets/img/posts/<?= $selectedPost['img'];?>" alt="<?=$selectedPost['title'];?>"> 
   <h2><?= $post['title']; ?></h2>

@@ -21,6 +21,10 @@ if(isset($_GET['page'])){
             require_once('controllers/postController.php');
             break;
 
+        case 'categories' : 
+            require_once('controllers/categoriesController.php');
+            break;
+
         case 'user' : 
             require_once('controllers/userController.php');
             break;

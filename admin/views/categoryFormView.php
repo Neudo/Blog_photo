@@ -7,7 +7,7 @@
         <?php endforeach; ?>
 <?php endif; ?>
 
-<form action="" method="POST" enctype="multipart/form-data"> <!-- Ne pas oublier le enctype pour que les fichiers soient envoyés -->
+<form action="" method="POST" enctype="multipart/form-data"> 
 
     <label for="name">Nom</label>
     <input type="text" name="name" id="name" value="<?= isset($selectedCategory) ? $selectedCategory['name']:($submitedDesription ??''); ?>"> <br>

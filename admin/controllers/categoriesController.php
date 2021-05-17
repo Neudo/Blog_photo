@@ -46,7 +46,7 @@ if($action == 'new') {
     }
 
     if(empty($errors)) {
-      $result = addCategory($name, $description, $fileName);
+      $result = addCategory($name, $description, $image);
 
       if($result){
         $_SESSION['message'] = "Catégorie bien enregistrée !";

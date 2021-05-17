@@ -3,7 +3,11 @@
 
 function getAllPosts(){
     $db = dbConnect();
-    $query = $db->query("SELECT * FROM posts ORDER BY date DESC ");
+    $query = $db->query("SELECT posts.*, categories.name, users.pseudo
+    FROM posts
+    JOIN categories ON posts.category_id
+    JOIN users ON posts.user_id=users.id
+    ORDER BY date DESC ");
 
     $posts = $query->fetchAll();
     return $posts;
@@ -12,7 +16,10 @@ function getAllPosts(){
 
 function getLatestPosts(){
     $db = dbConnect();
-    $query = $db->query("SELECT * FROM posts ORDER BY date DESC LIMIT 2 ");
+    $query = $db->query("SELECT posts.*, users.pseudo AS author
+    FROM posts
+    JOIN users ON posts.user_id = users.id
+    ORDER BY posts.date DESC LIMIT 2 ");
 
     $latestPosts = $query->fetchAll();
     return $latestPosts;
@@ -21,9 +28,8 @@ function getLatestPosts(){
 
 function getPost($postId){
     $db = dbConnect();
-    $query = $db->prepare("SELECT posts.*, categories.name, users.pseudo
+    $query = $db->prepare("SELECT posts.*, users.pseudo AS author
     FROM posts
-    JOIN categories ON posts.category_id=categories.id
     JOIN users ON posts.user_id=users.id
     WHERE posts.id = ? ");
     $query->execute([$postId]);
@@ -31,24 +37,18 @@ function getPost($postId){
     return $query->fetch();
 }
 
+
 function getPostsByCategoryId($categoryId){
     $db = dbConnect();
-    $query = $db->prepare("SELECT * FROM posts WHERE category_id = ?") ;
+    $query = $db->prepare("SELECT p.*, u.pseudo AS author
+    FROM posts p
+    JOIN categories_posts cp ON p.id = cp.post_id
+    JOIN categories c ON cp.category_id = c.id
+    JOIN users u ON p.user_id = u.id
+    WHERE c.id = ?
+    ORDER BY p.date DESC") ;
     $query->execute([$categoryId]);
     return $query->fetchAll();
-
-    $allPosts = getAllPosts();
-
-    $categoryPosts = [];
-
-    foreach($allPosts as $post){
-        if($post['category_id'] == $categoryId){
-            $categoryPosts[] = $post;
-        }
-    }
-
-    return $categoryPosts;
-
 }
 
 function addPost($title, $summary, $content, $fileName){

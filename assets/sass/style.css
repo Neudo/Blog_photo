@@ -5,23 +5,19 @@ body {
 }
 
 .cover-pic {
-  position: absolute;
-  width: 100vw;
+  width: 100%;
   top: 0;
   left: 0;
   z-index: -1;
-}
-
-main {
-  margin-top: 170px;
 }
 
 nav {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  max-width: 100%;
+  width: 100%;
   margin: 15px;
+  position: absolute;
 }
 
 .logo img {
@@ -200,6 +196,33 @@ textarea {
 
 .container-latest-posts {
   display: flex;
+  margin-left: 241px;
+  margin-bottom: 50px;
+  width: 67%;
+}
+
+.container-latest-posts h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.container-latest-posts p {
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+.container-latest-posts article {
+  padding-right: 30px;
+}
+
+.container-latest-posts img {
+  width: 100%;
+}
+
+.container-latest-posts span {
+  font-size: 15px;
+  font-style: italic;
 }
 
 .category-title {
@@ -207,6 +230,24 @@ textarea {
   width: 15%;
   text-align: center;
   position: fixed;
+}
+
+.line {
+  width: 96%;
+  height: 1px;
+  margin: auto;
+  background-color: white;
+  opacity: 0.3;
+  margin-bottom: 6rem;
+}
+
+.cadre-image {
+  width: 100%;
+  height: 370px;
+  background-repeat: no-repeat;
+  background-size: 150%;
+  background-position: center center;
+  margin-bottom: 25px;
 }
 
 .category-name {
@@ -223,7 +264,74 @@ textarea {
   align-items: flex-end;
 }
 
+.container-gallery-index {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 102px;
+}
+
 .container-gallery img {
   width: 40%;
   margin: 0 10% 10% 0;
+}
+
+.category img {
+  width: 20%;
+}
+
+.category a {
+  width: 100%;
+}
+
+.category h2 {
+  width: 35%;
+}
+
+.post img {
+  width: 50vw;
+}
+
+.post h2 {
+  font-weight: bold;
+}
+
+.post span {
+  font-style: italic;
+}
+
+.container-categories-index {
+  margin: 6rem auto;
+  display: flex;
+  width: 70%;
+}
+.container-categories-index img {
+  width: 80%;
+}
+
+.category {
+  padding: 0px 35px;
+  width: 100%;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+main {
+  top: 0;
+}
+
+.all-posts-button a {
+  border: 1px solid white;
+  padding: 10px;
+  margin: auto;
+}
+
+.all-posts-button {
+  text-align: center;
+  margin-bottom: 200px;
 }
