@@ -24,7 +24,6 @@
     else{
       
     	$posts = getAllPosts();
-    	
 		}
 		
 		$categories = getAllCategories();

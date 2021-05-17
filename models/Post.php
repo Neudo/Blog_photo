@@ -5,7 +5,7 @@ function getAllPosts(){
     $db = dbConnect();
     $query = $db->query("SELECT posts.*, categories.name, users.pseudo
     FROM posts
-    JOIN categories ON posts.category_id
+    JOIN categories ON posts.category_id = categories.id
     JOIN users ON posts.user_id=users.id
     ORDER BY date DESC ");
 

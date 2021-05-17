@@ -15,7 +15,6 @@
 		</tr>
 	</thead>
 	<tbody>
-
 	<?php foreach($posts as $post): ?>	
 
 		<tr>

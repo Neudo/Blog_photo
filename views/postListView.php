@@ -1,7 +1,7 @@
 
-    <div class="container-latest-posts">
+    <div class="container-all-posts">
         <?php if(count($posts) > 0): ?>
-            <?php foreach($latestPosts as $post): ?>
+            <?php foreach($posts as $post): ?>
             <article>
                 <div class="post">
                     <a href="index.php?page=post&id=<?= $post['id']; ?>">
