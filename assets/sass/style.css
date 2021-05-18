@@ -16,7 +16,7 @@ nav {
   justify-content: flex-end;
   align-items: center;
   width: 100%;
-  margin: 15px;
+  margin: 15px 0px;
   position: absolute;
 }
 
@@ -196,9 +196,8 @@ textarea {
 
 .container-latest-posts {
   display: flex;
-  margin-left: 241px;
-  margin-bottom: 50px;
-  width: 67%;
+  margin: 0 auto 50px;
+  width: 66%;
 }
 
 .container-latest-posts h2 {
@@ -213,7 +212,11 @@ textarea {
 }
 
 .container-latest-posts article {
-  padding-right: 30px;
+  padding-right: 40px;
+}
+
+.container-latest-posts article:last-child {
+  padding-right: 0;
 }
 
 .container-latest-posts img {
@@ -226,10 +229,12 @@ textarea {
 }
 
 .category-title {
-  font-size: 80px;
+  font-size: 50px;
   width: 15%;
   text-align: center;
   position: fixed;
+  top: 190px;
+  left: -21px;
 }
 
 .line {
@@ -247,21 +252,21 @@ textarea {
   background-repeat: no-repeat;
   background-size: 150%;
   background-position: center center;
-  margin-bottom: 25px;
 }
 
 .category-name {
   position: fixed;
-  top: 80%;
-  left: 5%;
-  font-size: 50px;
-  width: 24%;
+  top: 85%;
+  left: 6%;
+  font-size: 30px;
+  width: 17%;
 }
 
 .container-gallery {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  margin-top: 250px;
 }
 
 .container-gallery-index {
@@ -280,20 +285,18 @@ textarea {
   width: 20%;
 }
 
-.category a {
-  width: 100%;
-}
-
-.category h2 {
-  width: 35%;
-}
-
 .post img {
   width: 50vw;
+  margin-bottom: 25px;
 }
 
 .post h2 {
   font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.post p {
+  margin-bottom: 15px;
 }
 
 .post span {
@@ -305,13 +308,21 @@ textarea {
   display: flex;
   width: 70%;
 }
+
+.container-categories-index article {
+  padding: 0 30px;
+}
+
 .container-categories-index img {
-  width: 80%;
+  width: 100%;
+  display: block;
 }
 
 .category {
-  padding: 0px 35px;
+  padding: 0px 0px;
   width: 100%;
+  display: block;
+  margin: 0;
 }
 
 header {
@@ -333,5 +344,45 @@ main {
 
 .all-posts-button {
   text-align: center;
-  margin-bottom: 200px;
+  margin: 150px 0 200px;
+}
+
+.container-all-posts {
+  display: flex;
+  margin: 150px auto;
+  width: 70%;
+}
+
+.container-all-posts img {
+  width: 100%;
+}
+
+.post {
+  padding-right: 25px;
+}
+
+.content {
+  width: 60%;
+  font-size: 25px;
+  margin: auto;
+}
+
+.comment-section {
+  background: #202020;
+  width: 100%;
+}
+
+.card-post {
+  background: #202020;
+  padding: 15px;
+}
+
+.card-category {
+  background: #202020;
+  padding: 15px;
+  display: block;
+}
+
+.container-login {
+  margin-top: 100px;
 }

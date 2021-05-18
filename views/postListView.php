@@ -5,10 +5,12 @@
             <article>
                 <div class="post">
                     <a href="index.php?page=post&id=<?= $post['id']; ?>">
-                    <img src="assets/img/posts/<?= $post['img'];?>" alt="<?=$post['title'];?>">
-                    <h2><?= $post['title']; ?></h2>
-                        <div><?= $post['summary']; ?></div>
-                        <span><?= dateConverter($post['date']); ?></span>
+                    <div class="cadre-image" style="background-image: url('assets/img/posts/<?= $post['img'];?>" alt="<?=$post['title'];?>)'"></div>
+                    <div class="card-post">
+                        <h2><?= $post['title']; ?></h2>
+                            <p><?= $post['summary']; ?></p>
+                            <span><?= dateConverter($post['date']); ?></span>
+                    </div>
                         </a>
                 </div>
                 </article>

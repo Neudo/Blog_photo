@@ -6,7 +6,9 @@
                 <div class="category">
                     <a href="index.php?page=categories&category_id=<?= $category['id']; ?>">
                         <img src="assets/img/categories/<?= $category['img'];?>" alt="<?=$category['name'];?>">
-                            <h2><?= $category['name']; ?></h2>
+                            <div class="card-category">
+                                <h2><?= $category['name']; ?></h2>
+                            </div>
                     </a>
                 </div>
             </article>
@@ -16,17 +18,18 @@
 <div class="line"></div>
 
 <div class="container-latest-posts">
-    <div class="vertical">Derniers articles</div>
+    <div class="vertical latest">Derniers articles</div>
         <?php if(count($posts) > 0): ?>
             <?php foreach($latestPosts as $post): ?>
             <article>
                 <a href="index.php?page=post&id=<?= $post['id']; ?>">
-                <div class="cadre-image" style="background-image: url('assets/img/posts/<?= $post['img'];?>" alt="<?=$post['title'];?>) '"></div> 
-                <h2><?= $post['title']; ?></h2>
-                    <p><?= $post['summary']; ?></p>
-                    <span><?= dateConverter($post['date']); ?></span>
-
-                    </a>
+                    <div class="cadre-image" style="background-image: url('assets/img/posts/<?= $post['img'];?>" alt="<?=$post['title'];?>) '"></div> 
+                    <div class="card-post">
+                        <h2><?= $post['title']; ?></h2>
+                            <p><?= $post['summary']; ?></p>
+                            <span><?= dateConverter($post['date']); ?></span>
+                    </div>
+                </a>
                 </article>
             <?php endforeach; ?>
         <?php else: ?>
