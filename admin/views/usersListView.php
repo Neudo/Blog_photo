@@ -21,10 +21,13 @@
 			<td><?= $user['id'];?></td>
       <td><?= $user['pseudo'];?></td>
       <td><?= $user['email'];?></td>
-			<td><?= $user['is_admin'];?>
-		</td>    
+				<td><?php if ($user['is_admin']  == 0): ?>
+							<?= "Non"; ?>
+								<?php else: ?>
+							<?= "Oui"; ?></td>
+						<?php endif; ?>
 
-  
+
 			<td>
 				<a class="edit" href="index.php?page=users&action=edit&id=<?= $user['id'];?>">Modifier</a>
 				<a class="danger" href="index.php?page=users&action=delete&id=<?= $user['id'];?>">Supprimer</a>
