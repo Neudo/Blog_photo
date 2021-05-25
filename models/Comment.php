@@ -1,7 +1,7 @@
 <?php 
 
 function addComment() {
-  $db = dbConnect();
+  global $db;$db = dbConnect();
   $query = $db->prepare("INSERT INTO posts (comment, author")
   VALUES
 }

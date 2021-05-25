@@ -31,7 +31,7 @@
     <label for="category">Catégorie(s)</label>
     <select name="categories[]" id="category" multiple>
         <?php foreach($categories as $category): ?>	
-            <option value=""><?= $category['name'];?></option>
+            <option value="<?= $category['id'];?>"><?= $category['name'];?></option>
         <?php endforeach; ?>
     </select>
 
@@ -46,4 +46,4 @@
     <button>Sauvegarder</button>
 </form>
 
-<?php var_dump($_POST['categories']); ?>
+<?php var_dump($_POST); ?>

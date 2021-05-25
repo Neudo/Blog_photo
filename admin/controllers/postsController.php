@@ -34,6 +34,10 @@ if($action == 'new') {
     if(empty($content)) {
       $errors[] = "Merci d'inserer un contenu !";
     }
+    if(isset($_POST['category_id'] )) {
+      $submittedCategory = $_POST['category_id'];
+    }
+
     if(empty($image['tmp_name'])) {
       $errors[] = "Merci d'ajouter une image !";
     }

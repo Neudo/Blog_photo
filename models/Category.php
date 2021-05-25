@@ -1,7 +1,7 @@
 <?php
 
 function getAllCategories(){
-    $db = dbConnect();
+    global $db;
     $query = $db->query("SELECT * FROM categories ");
 
     $categories = $query->fetchAll();
@@ -11,7 +11,7 @@ function getAllCategories(){
 
 
 function getCategory($categoryId){
-    $db = dbConnect();
+    global $db;
     $query = $db->prepare("SELECT * FROM categories WHERE id = ?" );
     $query->execute([$categoryId]);
     return $query->fetch();
@@ -19,7 +19,7 @@ function getCategory($categoryId){
 
 
     function addCategory($name, $description, $fileName){
-        $db = dbConnect();
+        global $db;
         $query = $db->prepare('INSERT INTO categories (name, description, img) VALUES (?, ?, ?)');
         return $query->execute(
         [
@@ -31,13 +31,13 @@ function getCategory($categoryId){
 }
 
 function deleteCategory($categoryId) {
-    $db = dbconnect();
+    global $db;
     $query = $db->prepare('DELETE FROM categories WHERE id = ?');
     return $query->execute([$categoryId]);
 }
 
 function updateCategory($categoryId, $data, $newFileName=false) {
-    $db = dbconnect();
+    global $db;
 
     if($newFileName) {
         $query = $db->prepare('UPDATE categories SET name = :new_name, description = :new_description, img = :new_img WHERE id = :category_id');

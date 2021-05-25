@@ -11,7 +11,7 @@ function getAllPosts(){
 }
 
 function getLatestPosts(){
-    $db = $GLOBALS['db'];
+    global $db;
     $query = $db->query("SELECT posts.*, users.pseudo AS author
     FROM posts
     JOIN users ON posts.user_id = users.id
@@ -23,11 +23,11 @@ function getLatestPosts(){
 }
 
 function getPost($postId){
-    $db = $GLOBALS['db'];
+    global $db;
     $query = $db->prepare("SELECT posts.*, users.pseudo AS author categories.name AS category_name,
     FROM posts
     JOIN users ON posts.user_id=users.id
-    WHERE posts.id = ? ");
+    WHERE posts.id = ?");
     $query->execute([$postId]);
 
     return $query->fetch();
@@ -35,7 +35,7 @@ function getPost($postId){
 
 
 function getPostsByCategoryId($categoryId){
-    $db = $GLOBALS['db'];
+    global $db;
     $query = $db->prepare("SELECT p.*, u.pseudo AS author
     FROM posts p
     JOIN categories_posts cp ON p.id = cp.post_id
@@ -48,7 +48,7 @@ function getPostsByCategoryId($categoryId){
 }
 
     function addPost($title, $summary, $content, $image){
-        $db = $GLOBALS['db'];
+        global $db;
         $query = $db->prepare('INSERT INTO posts (title, summary, content, img) VALUES (?, ?, ?, ?)');
         $query->execute(
             [
@@ -75,14 +75,14 @@ function getPostsByCategoryId($categoryId){
     }
 
 function deletePost($postId) {
-    $db = $GLOBALS['db'];
+    global $db;
     $query = $db->prepare('DELETE FROM posts WHERE id = ?');
     return $query->execute([$postId]);
 }
 
 
         function updatePost($postId, $data, $newFileName=false) {
-            $db = dbconnect();
+            global $db;
 
         if($newFileName) {
             $query = $db->prepare('UPDATE posts SET title = :new_title, summary = :new_summary, content = :new_content, img = :new_img WHERE id = :post_id');
