@@ -24,9 +24,7 @@ function getLatestPosts(){
 
 function getPost($postId){
     global $db;
-    $query = $db->prepare("SELECT posts.*, users.pseudo AS author categories.name AS category_name,
-    FROM posts
-    JOIN users ON posts.user_id=users.id
+    $query = $db->prepare("SELECT * FROM posts
     WHERE posts.id = ?");
     $query->execute([$postId]);
 
