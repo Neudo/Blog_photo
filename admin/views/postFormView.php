@@ -29,14 +29,13 @@
     <br>
 
     <label for="category">Catégorie(s)</label>
-    <select name="category" id="category" multiple>
+    <select name="categories[]" id="category" multiple>
         <?php foreach($categories as $category): ?>	
             <option value=""><?= $category['name'];?></option>
         <?php endforeach; ?>
     </select>
 
 <p>Maintenez "CTRL" pour selectionner plusieurs catégories.</p>
-
 <label for="is_publied">Publier ?</label>
     <select name="is_publied" id="is_publied">
     <option value="no">Non</option>
@@ -46,3 +45,5 @@
 
     <button>Sauvegarder</button>
 </form>
+
+<?php var_dump($_POST['categories']); ?>

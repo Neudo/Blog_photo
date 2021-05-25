@@ -10,6 +10,7 @@
 		<?php if(!isset($_SESSION['user'])): ?> 
 			<a class="slide-line" href="index.php?page=user&action=login">Se connecter</a>
 			<a class="slide-line" href="index.php?page=user&action=register">S'inscrire</a>
+			<a href="index.php?page=user&action=login"><img src="assets/img/various/account.png" alt=""></a>
 	
 			<?php else: ?>
 	

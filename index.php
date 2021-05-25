@@ -3,6 +3,8 @@ setlocale(LC_ALL, "fr_FR");
 session_start();
 require_once('tools.php');
 
+$db = dbConnect();
+
 
 if(isset($_GET['page'])){
 

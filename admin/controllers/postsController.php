@@ -41,15 +41,13 @@ if($action == 'new') {
       $extension = pathinfo($image['name'], PATHINFO_EXTENSION);
       $allowedExtensions = ['jpg', 'jpeg', 'png', 'gif'];
 
-      if(in_array($extension, $allowedExtensions)) { //verif de l'extension
-        if($image['size'] > 2000000) {  // verif du poids
+      if(in_array($extension, $allowedExtensions)) {
+         
+        if($image['size'] > 2000000) { 
           $errors[] = "votre fichier est trop lourd...";
         }
-
-      else {
-        $newFileName = time() . '.' . $extension;
-        move_uploaded_file($image['tmp_name'], '../assets/img/categories/'. $newFileName);
-       }
+        $fileName = time(). '.' . $extension; // renomage de l'extension
+        move_uploaded_file($_FILES['image']['tmp_name'], '../assets/img/posts . $fileName');
       }
       else {
         $errors[] = "Votre fichier n'est pas d'un format autorisé ...";

@@ -1,7 +1,7 @@
 <?php
 
 function newUser($submittedPseudo, $submittedEmail, $submittedPassword, $submittedBio) {
-  $db = dbConnect();
+  global $db;
 
   $query = $db->prepare('INSERT INTO users (pseudo, email, bio, password) VALUES (?, ?, ?, ?)');
   $result = $query->execute(
@@ -15,7 +15,7 @@ function newUser($submittedPseudo, $submittedEmail, $submittedPassword, $submitt
 }
 
 function login($email, $password) {
-  $db = dbConnect();
+  global $db;
 
   $query = $db->prepare('SELECT * FROM users WHERE email = ?'); 
   $query->execute( [$email] );
@@ -36,7 +36,7 @@ function login($email, $password) {
 }
 
 function getAllUsers(){
-  $db = dbConnect();
+  global $db;
   $query = $db->query("SELECT * FROM users");
 
   $users = $query->fetchAll();
@@ -44,7 +44,7 @@ function getAllUsers(){
 }
 
 function getPseudo(){
-  $db = dbConnect();
+  global $db;
   $query = $db->query("SELECT pseudo FROM users");
 
   $pseudo = $query->fetchAll();
@@ -53,7 +53,7 @@ function getPseudo(){
 
 
 function getUser($userId){
-  $db = dbConnect();
+  global $db;
   $query = $db->prepare("SELECT * FROM users WHERE id = ?");
   $query->execute([$userId]);
 
@@ -61,13 +61,13 @@ function getUser($userId){
 }
 
 function deleteUser($userId) {
-  $db = dbconnect();
+  global $db;
   $query = $db->prepare('DELETE FROM users WHERE id = ?');
   return $query->execute([$userId]);
 }
 
     function updateUser($userId, $data) {
-      $db = dbconnect();
+      global $db;
       $query = $db->prepare('UPDATE users SET pseudo = :new_pseudo, email = :new_email, password = :new_password  WHERE id = :user_id');
       return $query->execute(
     [

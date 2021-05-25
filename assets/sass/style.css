@@ -37,7 +37,7 @@ a {
 
 .slide-line::before {
   content: "";
-  background: white;
+  background: #486A0D;
   position: absolute;
   top: 30px;
   width: 100%;
@@ -63,6 +63,11 @@ label {
   margin-bottom: 10px;
 }
 
+.test-label {
+  display: flex;
+  flex-direction: column;
+}
+
 .firstname-form,
 .lastname-form,
 .email-form {
@@ -82,17 +87,20 @@ label {
 
 .send-form {
   margin-top: 10px;
-  border: 2px #707070 solid;
-  background-color: black;
+  border: none;
+  border-radius: 10px;
+  background-color: #486A0D;
   color: white;
   font-size: 60px;
-  width: 15%;
+  width: 21%;
+  cursor: pointer;
 }
 
 input,
 textarea {
-  border: none;
-  background: #707070;
+  border: 1px solid #486A0D;
+  border-radius: 10px;
+  background: transparent;
   color: white;
 }
 
@@ -115,27 +123,81 @@ textarea {
   margin-top: 12vw;
 }
 
+.bio-texte-1 {
+  display: flex;
+}
+
 .title {
   font-size: 3vw;
   text-align: center;
   padding: 5vw;
+  margin-top: 10%;
 }
 
 .bio-title {
   font-size: 2vw;
-  width: 85%;
-  text-align: center;
+  width: 41%;
+  text-align: end;
   justify-content: center;
   position: absolute;
-  top: 67vw;
+  top: 45vw;
   left: 7%;
 }
 
+.sub-title {
+  font-size: 45px;
+  margin-bottom: 15px;
+}
 .img-bio {
   margin-left: 50%;
-  display: flex;
   position: relative;
+  width: 30%;
 }
+
+.img-bio2 {
+  width: 30%;
+  position: relative;
+  top: 150px;
+  left: 18%;
+}
+
+.img-bio3 {
+  width: 30%;
+  position: relative;
+  left: 50%;
+  top: 250px;
+}
+
+
+
+.text-2 {
+  width: 37%;
+  margin: 4% 0 0 20%;
+  font-size: 30px;
+}
+
+.text-3 {
+  width: 33%;
+  position: relative;
+  top: 250px;
+  right: 15%;
+  text-align: end;
+  font-size: 30px;
+
+}
+.container-text {
+  display: flex;
+}
+
+.green-line {
+  background: #486A0D;
+  width: 3px;
+  height: 422%;
+  position: absolute;
+  left: 49%;
+}
+
+
 
 .container-404 {
   display: flex;
@@ -186,6 +248,7 @@ textarea {
 .contact-text {
   max-width: 1200px;
   font-size: 40px;
+  margin: 200px 0 150px 48px;
   margin-bottom: 150px;
   margin-left: 48px;
 }
@@ -325,27 +388,65 @@ textarea {
   margin: 0;
 }
 
-header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-}
 
 main {
   top: 0;
 }
 
 .all-posts-button a {
-  border: 1px solid white;
+  border: 1px solid #486A0D;
   padding: 10px;
   margin: auto;
+  overflow: hidden;
 }
 
 .all-posts-button {
   text-align: center;
-  margin: 150px 0 200px;
+  position: absolute;
+  left: 500px;
 }
+
+.all-posts-button a:hover {
+  color: #486A0D;
+}
+
+.hook {
+  position: absolute;
+  top: 50vh;
+  left: 50%;
+  font-size: 36px;
+}
+
+.green {
+  color: #0A6B0A;
+}
+
+.more-about {
+  font-size: 90px;
+}
+
+/* aside {
+  position: relative;
+  background: white;
+  transform: translate(-50% -50%);
+  pointer-events: none;
+  border-radius: 50%;
+  animation: animate 1s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    width: 0px;
+    height: 0px;
+    opacity: 0.5;
+  }
+  100% {
+    width: 500px;
+    height: 500px;
+    opacity: 1;
+    color: black;
+  }
+} */
 
 .container-all-posts {
   display: flex;
@@ -373,12 +474,12 @@ main {
 }
 
 .card-post {
-  background: #202020;
+  background: #486A0D;
   padding: 15px;
 }
 
 .card-category {
-  background: #202020;
+  background: #486A0D;
   padding: 15px;
   display: block;
 }

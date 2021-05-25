@@ -3,10 +3,14 @@
 </p>
 
     <form class="container-contact" action="" method="POST">
-        <label  for="firstname">Prénom</label>
-        <input class="firstname-form" type="text" id="firstname" name="firstname" value="<?= (isset($firstname) && !empty($errors)) ? $firstname : "" ?>"> <br>
-        <label for="lastname">Nom</label>
-        <input class="lastname-form" type="text" id="lastname" name="lastname" required value="<?= (isset($lastname) && !empty($errors)) ? $lastname : "" ?>"> <br>
+        <div class="test-label">
+            <label  for="firstname">Prénom</label>
+            <input class="firstname-form" type="text" id="firstname" name="firstname" value="<?= (isset($firstname) && !empty($errors)) ? $firstname : "" ?>"> <br>
+        </div>
+        <div class="test-label">
+            <label for="lastname">Nom</label>
+            <input class="lastname-form" type="text" id="lastname" name="lastname" required value="<?= (isset($lastname) && !empty($errors)) ? $lastname : "" ?>"> <br>
+        </div>
         <label for="e-mail">Votre adresse e-mail</label>
         <input class="email-form" type="text" id="e-mail" name="e-mail" required value="<?= (isset($email) && !empty($errors)) ? $email : "" ?>"> <br>
         <label for="object">Sujet du message : </label>

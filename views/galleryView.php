@@ -4,9 +4,14 @@
 </div>
 
 
-  <p class="category-name">
+<div class="categories-name-container"></div>
+
+
+
+  <!-- <p class="category-name">
+  
     Fleurs / Insectes / Eau / Peinture
-  </p>
+  </p> -->
 
 <div class="container-gallery">
   <img src="assets/img/gallery/fleurs.jpg" alt="">

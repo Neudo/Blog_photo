@@ -2,20 +2,16 @@
 <?php
 
 function getAllPosts(){
-    $db = dbConnect();
-    $query = $db->query("SELECT posts.*, categories.name, users.pseudo
+    global $db;
+    $query = $db->query("SELECT *
     FROM posts
-    JOIN categories ON posts.category_id = categories.id
-    JOIN users ON posts.user_id=users.id
     ORDER BY date DESC ");
-
     $posts = $query->fetchAll();
     return $posts;
-
 }
 
 function getLatestPosts(){
-    $db = dbConnect();
+    $db = $GLOBALS['db'];
     $query = $db->query("SELECT posts.*, users.pseudo AS author
     FROM posts
     JOIN users ON posts.user_id = users.id
@@ -27,8 +23,8 @@ function getLatestPosts(){
 }
 
 function getPost($postId){
-    $db = dbConnect();
-    $query = $db->prepare("SELECT posts.*, users.pseudo AS author
+    $db = $GLOBALS['db'];
+    $query = $db->prepare("SELECT posts.*, users.pseudo AS author categories.name AS category_name,
     FROM posts
     JOIN users ON posts.user_id=users.id
     WHERE posts.id = ? ");
@@ -39,7 +35,7 @@ function getPost($postId){
 
 
 function getPostsByCategoryId($categoryId){
-    $db = dbConnect();
+    $db = $GLOBALS['db'];
     $query = $db->prepare("SELECT p.*, u.pseudo AS author
     FROM posts p
     JOIN categories_posts cp ON p.id = cp.post_id
@@ -51,51 +47,65 @@ function getPostsByCategoryId($categoryId){
     return $query->fetchAll();
 }
 
-function addPost($title, $summary, $content, $fileName){
-    $db = dbConnect();
-    $query = $db->prepare('INSERT INTO posts (title, summary, content, img) VALUES (?, ?, ?, ?)');
-    return $query->execute(
-    [
-        $title,
-        $summary,
-        $content,
-        $fileName
-    ]
-);
-}
+    function addPost($title, $summary, $content, $image){
+        $db = $GLOBALS['db'];
+        $query = $db->prepare('INSERT INTO posts (title, summary, content, img) VALUES (?, ?, ?, ?)');
+        $query->execute(
+            [
+                $title,
+                $summary,
+                $content,
+                $image
+            ]
+        );
+
+        $lastInsertedId = $db->lastInsertId();
+
+        $selectedCategories = $_POST['categories'];
+        foreach($selectedCategories as $category) {
+
+            $query = $db->prepare('INSERT INTO categories_posts (post_id, category_id) VALUES (?, ?)');
+            return $query->execute(
+                [
+                    $lastInsertedId,
+                    $category
+                ]
+            );
+        }
+    }
 
 function deletePost($postId) {
-$db = dbconnect();
-$query = $db->prepare('DELETE FROM posts WHERE id = ?');
-return $query->execute([$postId]);
+    $db = $GLOBALS['db'];
+    $query = $db->prepare('DELETE FROM posts WHERE id = ?');
+    return $query->execute([$postId]);
 }
 
 
-    function updatePost($postId, $data, $newFileName=false) {
-        $db = dbconnect();
+        function updatePost($postId, $data, $newFileName=false) {
+            $db = dbconnect();
 
-    if($newFileName) {
-        $query = $db->prepare('UPDATE posts SET title = :new_title, summary = :new_summary, content = :new_content, img = :new_img WHERE id = :post_id');
-        return $query->execute(
-        [
-            'new_title' => $data['title'],
-            'post_id' => $postId,
-            'new_summary' => $data['summary'],
-            'new_content' => $data['content'],
-            'new_img' => $newFileName
-        ]
-    );
-}
-        else {
-            $query = $db->prepare('UPDATE posts SET title = :new_title, summary = :new_summary, content = :new_content WHERE id = :post_id');
+        if($newFileName) {
+            $query = $db->prepare('UPDATE posts SET title = :new_title, summary = :new_summary, content = :new_content, img = :new_img WHERE id = :post_id');
             return $query->execute(
             [
                 'new_title' => $data['title'],
                 'post_id' => $postId,
                 'new_summary' => $data['summary'],
                 'new_content' => $data['content'],
+                'new_img' => $newFileName
             ]
         );
     }
-}
+            else {
+                $query = $db->prepare('UPDATE posts SET title = :new_title, summary = :new_summary, content = :new_content WHERE id = :post_id');
+                return $query->execute(
+                [
+                    'new_title' => $data['title'],
+                    'post_id' => $postId,
+                    'new_summary' => $data['summary'],
+                    'new_content' => $data['content'],
+                ]
+            );
+        }
+    }
 ?>

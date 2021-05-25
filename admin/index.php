@@ -1,11 +1,14 @@
 <?php
-setlocale(LC_ALL, "fr_FR"); //Pour la date en français.
+setlocale(LC_ALL, "fr_FR");
 session_start();
+
+
 if(!isset($_SESSION['user']) || $_SESSION['user']['is_admin'] == 0 ) {
   header('Location: ../index.php');
   exit;
 }
 require_once('../tools.php'); 
+$db = dbConnect();
 
 
 if(isset($_GET['page'])){

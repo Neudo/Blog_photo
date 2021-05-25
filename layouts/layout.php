@@ -6,6 +6,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Palanquin:wght@300&display=swap" rel="stylesheet">
         <link href="assets/sass/style.css" rel="stylesheet">
+        <script src="assets/script/main.js" defer></script>
     </head>
     <body>
         <?php require_once ('partials/header.php'); ?>
