@@ -16,7 +16,7 @@
     <textarea name="summary" id="summary" cols="30" rows="5"><?= isset($selectedPost) ? $selectedPost['summary']:($summary ??'');?></textarea> <br>
    
     <label for="content">Contenu</label>
-    <textarea name="content" id="content" cols="50" rows="20"><?= isset($selectedPost) ? $selectedPost['content']:($content ??''); ?></textarea> <br>
+    <textarea class="tinymce" name="content" id="content" cols="50" rows="20"><?= isset($selectedPost) ? $selectedPost['content']:($content ??''); ?></textarea> <br>
 
     <label for="image">Image principale</label>
     <input type="file" name="image" id="image"> <br>
@@ -45,5 +45,3 @@
 
     <button>Sauvegarder</button>
 </form>
-
-<?php var_dump($_POST); ?>

@@ -1,5 +1,5 @@
 <img class="cover-pic" src="assets/img/various/main-pic.jpeg" alt="">
-<h2 class="hook">Objecitf macro, pour plonger au coeur du détail</h2>
+<h2 class="hook">Objecitf macro : pour plonger au coeur du détail</h2>
 
 <div class="container-categories-index">
         <?php foreach($categories as $category): ?>

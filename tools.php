@@ -1,6 +1,10 @@
 <?php
 
 function dbConnect(){
+    // try{
+    //     $db = new PDO('mysql:host=localhost;dbname=dv20bassalair;charset=utf8', 'dv20bassalair', 'm271Gy%f',
+    //         array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION)); 
+    // }
     try{
         $db = new PDO('mysql:host=localhost;dbname=photo_blog;charset=utf8', 'root', '',
             array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION)); 

@@ -92,6 +92,8 @@ function deletePost($postId) {
                 'new_content' => $data['content'],
                 'new_img' => $newFileName
             ]
+
+            
         );
     }
             else {

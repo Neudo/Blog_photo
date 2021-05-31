@@ -8,6 +8,7 @@ $categories = getAllCategories();
 $action = $_GET['action'];
 $errors = [];
 
+
 if($action == 'login') {  
 
   if(isset($_SESSION['user'])) {
@@ -44,7 +45,7 @@ if($action == 'login') {
           'is_admin' => $user['is_admin'],
         ];
 
-        $_SESSION['message'] = 'Vous êtes bien connecté !'; 
+        $_SESSION['message'] = '<span class="succes">Vous êtes bien connecté !</span>'; 
 
         header('Location: index.php'); 
         exit;
@@ -59,7 +60,7 @@ if($action == 'login') {
 if($action == 'logout') {  
 
   unset($_SESSION['user']); 
-  $_SESSION['message'] = 'Vous êtes bien déconnecté !';
+  $_SESSION['message'] = '<span class="succes">Vous êtes bien déconnecté !</span>';
   header('Location: index.php'); 
   exit;
 }
@@ -112,6 +113,10 @@ if($action == 'edit') {
 
   $view = 'views/userInfosView.php';
 
+}
+
+if($action == 'choose') {
+  $view = 'views/userView.php';
 }
 
 ?>

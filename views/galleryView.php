@@ -1,6 +1,6 @@
 <div class="category-title vertical">
-  <h3>Accroc</h3>
-  <h3>Macro Photo </h3>
+  <h3><span class="green">A</span>ccroc</h3>
+  <h3><span class="green">M</span>acro <span class="green">P</span>hoto </h3>
 </div>
 
 
@@ -8,10 +8,10 @@
 
 
 
-  <!-- <p class="category-name">
+  <p class="category-name">
   
     Fleurs / Insectes / Eau / Peinture
-  </p> -->
+  </p>
 
 <div class="container-gallery">
   <img src="assets/img/gallery/fleurs.jpg" alt="">
