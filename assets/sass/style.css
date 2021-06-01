@@ -133,7 +133,15 @@ label {
 }
 
 .container-register {
-  width: 29%;
+  width: 19%;
+}
+
+.container-login button , .container-register button {
+  background: white;
+  border-radius: 7px;
+  border: none;
+  font-size: 1.2rem;
+
 }
 
 .bg-login, .bg-register {
@@ -421,7 +429,7 @@ textarea {
   width: 17%;
 }
 
-.container-gallery {
+.container-gallery a {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -488,7 +496,6 @@ textarea {
 main {
   top: 0;
   margin-bottom: 200px;
-
 }
 
 .all-posts-button a {
@@ -496,16 +503,56 @@ main {
   padding: 10px;
   margin: auto;
   overflow: hidden;
+  border-radius: 10px;
+
+}
+
+button {
+  cursor: pointer;
+}
+
+.container-edit {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  margin: 150px auto;
+  background: #486A0D;
+  border-radius: 7px;
+  padding: 20px;
+}
+
+.container-edit input, .container-edit textarea {
+  width: 100%;
+  margin: 10px 0 10px 0;
+  border: 1px solid white;
+}
+
+
+.container-edit button {
+  background: white;
+  border-radius: 7px;
+  border: none;
+  margin: 20px auto;
+  font-size: 20px;
+  padding: 10px;
+
+}
+
+.container-edit h3 {
+  font-size: 30px;
 }
 
 .all-posts-button {
   text-align: center;
   margin: auto;
   margin-bottom: 300px;
+
 }
 
 .all-posts-button a:hover {
   color: #486A0D;
+  background: white;
+  border: none;
 }
 
 .hook {
@@ -656,4 +703,16 @@ footer {
   border: none;
   border-radius: 7px;
   width: 150px;
+}
+
+.active {
+  color: white;
+}
+
+.category-name {
+  color: #504850;
+}
+
+.container-gallery a {
+
 }

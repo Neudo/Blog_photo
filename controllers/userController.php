@@ -109,7 +109,8 @@ if($action == 'register') {
 }
 
 if($action == 'edit') {
-  $submittedPseudo = $_POST['pseudo'];
+  
+
 
   $view = 'views/userInfosView.php';
 
