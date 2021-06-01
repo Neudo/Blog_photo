@@ -7,7 +7,7 @@
 
   <a href="index.php?page=user&action=login">
     <div class="login-text">
-        <h2>Déjà inscrit ? Connecter vous</h2>
+        <h2>Connecter vous</h2>
     </div>
   </a>
 </div>
