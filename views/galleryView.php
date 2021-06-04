@@ -3,13 +3,7 @@
   <h3><span class="green">M</span>acro <span class="green">P</span>hoto </h3>
 </div>
 
-
-<div class="categories-name-container"></div>
-
-
-
   <p class="category-name">
-  
     <a href="#flowers" class="active">Fleurs</a> / <a a href="#insects">Insectes</a> / <a a href="#water">Eau</a> / <a a href="#paint">Peinture</a>
   </p>
 

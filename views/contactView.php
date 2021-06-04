@@ -1,5 +1,5 @@
 <p class="contact-text">
-    Une question ? Un avis ou tout autre chose ? <br> N’hésitez pas à me posez toutes vos questions ! <br> Vous pouvez utiliser le formulaire de contact ci-dessous ou m’envoyer <br> directement un mail à : contact@accroc-macro-photo.fr
+    Une question ? Un avis ou tout autre chose ? <br> N’hésitez pas à me posez toutes vos questions ! <br> Vous pouvez utiliser le formulaire de contact ci-dessous ou m’envoyer <br> Mail : contact@accroc-macro-photo.fr
 </p>
 
     <form class="container-contact" action="" method="POST">

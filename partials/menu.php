@@ -8,20 +8,16 @@
 	
 	
 		<?php if(!isset($_SESSION['user'])): ?> 
-			<!-- <a class="slide-line" href="index.php?page=user&action=login">Se connecter</a> -->
-			<!-- <a class="slide-line" href="index.php?page=user&action=register">S'inscrire</a> -->
 			<a href="index.php?page=user&action=choose"><img src="assets/img/various/account.png" alt=""></a>
 	
 			<?php else: ?>
-	
-			<h2>Salut, <?= $_SESSION['user']['pseudo']; ?> !</h2> 
-			<a href="index.php?page=user&action=logout">Déconnexion</a>  
-		
-			<?php if($_SESSION['user']['is_admin'] == 1): ?>  
-				<a href="./admin">Administration</a>
-			<?php else : ?>
-				<a href="index.php?page=user&action=edit">Mon compte</a>
+				<?php if($_SESSION['user']['is_admin'] == 1): ?>  
+					<a class="slide-line" href="./admin">Administration</a>
+					<a class="slide-line" href="index.php?page=user&action=logout">Déconnexion</a>  
+				<?php else : ?>
+					<a class="slide-line" href="index.php?page=user&action=edit">Mon compte</a>
+					<a class="slide-line" href="index.php?page=user&action=logout">Déconnexion</a>  
+				<?php endif; ?>
 			<?php endif; ?>
-		<?php endif; ?>
 	</nav>
 </header>

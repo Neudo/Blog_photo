@@ -14,3 +14,5 @@ allPostsButton.addEventListener("mouseover", function (e) {
   //   ripples.remove();
   // }, 1000);
 });
+
+

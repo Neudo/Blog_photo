@@ -5,7 +5,7 @@
   <form action="" method="POST">
   
     <label for="pseudo">Pseudo</label><br>
-    <input type="text" name="pseudo" id="pseudo" value="<?php ?>">
+    <input type="text" name="pseudo" id="pseudo" value="<?= $_SESSION['user']['pseudo'];?>">
   
     <label for="email">Email</label><br>
     <input type="text" name="email" id="email" value="">
