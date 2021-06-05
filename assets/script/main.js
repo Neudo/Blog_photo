@@ -1,4 +1,6 @@
 const allPostsButton = document.querySelector(".all-posts-button");
+const iconAccount = document.querySelector(".icon-account");
+const menuOptions = document.querySelector(".menu-options");
 
 allPostsButton.addEventListener("mouseover", function (e) {
   const x = e.clientX - e.target.offsetLeft;
@@ -15,4 +17,6 @@ allPostsButton.addEventListener("mouseover", function (e) {
   // }, 1000);
 });
 
-
+iconAccount.addEventListener("click", (event) => {
+  menuOptions.classList.toggle("is-visible");
+});

@@ -752,3 +752,25 @@ footer {
   width: 50%;
   margin: 200px auto;
 }
+
+.menu-options {
+  display: none;
+  position: absolute;
+  top: 54px;
+  left: 88%;
+  height: 195px;
+  background: #486a0d;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.menu-options a {
+  color: white;
+  display: inline-block;
+  margin-top: 30px;
+  margin-right: 0px;
+}
+
+.is-visible {
+  display: block;
+}
