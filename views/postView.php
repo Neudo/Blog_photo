@@ -1,8 +1,9 @@
 
-<img src="assets/img/posts/<?= $selectedPost['img'];?>" alt="<?=$selectedPost['title'];?>"> 
+<div class="full-post">
   <h2><?= $post['title']; ?></h2>
-  <span><?= dateConverter($post['date']); ?></span>
+  <img src="assets/img/posts/<?= $selectedPost['img'];?>" alt="<?=$selectedPost['title'];?>">
   <div class="content"><?= $post['content']; ?></div>
+</div>
 
   <a href="#">Commentaire : 4 </a>    <!--count le nb de commentaire-->
     <div class="comment-section">

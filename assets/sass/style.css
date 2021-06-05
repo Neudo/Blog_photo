@@ -178,8 +178,9 @@ label {
   border-radius: 10px;
   background-color: #486A0D;
   color: white;
-  font-size: 60px;
-  width: 21%;
+  font-size: 27px;
+  padding: 20px;
+  width: 12%;
   cursor: pointer;
 }
 
@@ -265,6 +266,7 @@ textarea {
   position: relative;
   left: 50%;
   top: 250px;
+  margin-bottom: 200px;
 }
 
 
@@ -291,7 +293,7 @@ textarea {
 .green-line {
   background: #486A0D;
   width: 3px;
-  height: 422%;
+  height: 431%;
   position: absolute;
   left: 49%;
 }
@@ -433,6 +435,14 @@ textarea {
   left: 6%;
   font-size: 30px;
   width: 17%;
+}
+
+.catego-name-gallery {
+  position: absolute;
+  top: 40%;
+  right: 27%;
+  font-size: 30px;
+  font-weight: bold;
 }
 
 .container-gallery a {
@@ -634,6 +644,8 @@ button {
 .card-post {
   background: #486A0D;
   padding: 15px;
+  min-height: 40%;
+  margin-bottom: 55px;
 }
 
 .card-category {
@@ -724,8 +736,6 @@ footer {
 }
 
 .carousel-cell {
-  width: 100%;
-  height: 300px;
   margin-right: 10px;
   border-radius: 5px;
   counter-increment: carousel-cell;
@@ -741,8 +751,10 @@ footer {
   margin: auto;
 }
 
-.carousel.is-fullscreen .carousel-cell {
+.carousel.is-fullscreen .carousel-cell img {
   height: 100%;
+  top: 0;
+  left: 0;
 }
 
 
@@ -773,4 +785,18 @@ footer {
 
 .is-visible {
   display: block;
+}
+
+.container-categories-infos {
+  margin: 10% 0 10% 5%;
+
+}
+
+.container-categories-infos h1 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.full-post {
+  margin-top: 20%;
 }

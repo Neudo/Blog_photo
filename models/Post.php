@@ -12,9 +12,7 @@ function getAllPosts(){
 
 function getLatestPosts(){
     global $db;
-    $query = $db->query("SELECT posts.*, users.pseudo AS author
-    FROM posts
-    JOIN users ON posts.user_id = users.id
+    $query = $db->query("SELECT * FROM posts
     ORDER BY posts.date DESC LIMIT 2 ");
 
     $latestPosts = $query->fetchAll();
