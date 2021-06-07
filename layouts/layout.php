@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
         <link rel="stylesheet" href="https://unpkg.com/flickity-fullscreen@1/fullscreen.css">
         <script src="assets/script/main.js" defer></script>
+        
     </head>
     <body>
         <?php require_once ('partials/header.php'); ?>

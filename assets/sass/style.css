@@ -388,6 +388,7 @@ textarea {
 
 .container-latest-posts article {
   padding-right: 40px;
+  width: 50%;
 }
 
 .container-latest-posts article:last-child {
@@ -434,14 +435,14 @@ textarea {
   top: 85%;
   left: 6%;
   font-size: 30px;
-  width: 17%;
+  width: 20%;
 }
 
 .catego-name-gallery {
   position: absolute;
-  top: 40%;
-  right: 27%;
-  font-size: 30px;
+  top: 53%;
+  right: 35%;
+  font-size: 65px;
   font-weight: bold;
 }
 
@@ -460,12 +461,12 @@ textarea {
 }
 
 .container-gallery img {
-  width: 40%;
-  margin: 0 10% 10% 0;
+  width: 100%;
 }
 
 .container-gallery {
   scroll-behavior: smooth;
+  margin-left: 35%;
 }
 
 .category img {
@@ -728,42 +729,48 @@ footer {
 }
 
 .active {
-  color: white;
+  color: white !important;
+}
+
+.category-name a {
+  color: rgb(180, 180, 180);
 }
 
 .category-name {
   color: #504850;
 }
 
-.carousel-cell {
-  margin-right: 10px;
-  border-radius: 5px;
-  counter-increment: carousel-cell;
+.carousel {
   background: black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
-.carousel-cell img {
+.carousel-image {
   display: block;
+  height: 300px;
+  /* set min-width, allow images to set cell width */
+  min-width: 150px;
+  max-width: 100%;
+  margin-right: 10px;
+  /* vertically center */
+  top: 50%;
+  transform: translateY(-50%)
+}
+
+.carousel.is-fullscreen .carousel-image {
+  height: auto;
   max-height: 100%;
-  margin: auto;
 }
 
-.carousel.is-fullscreen .carousel-cell img {
-  height: 100%;
-  top: 0;
-  left: 0;
+.carousel.is-fullscreen {
+  background: black;
+
+}
+
+.container-carousel {
+  margin-top: 15%;
 }
 
 
-
-.main-carousel {
-
-  width: 50%;
-  margin: 200px auto;
-}
 
 .menu-options {
   display: none;
@@ -799,4 +806,32 @@ footer {
 
 .full-post {
   margin-top: 20%;
+}
+
+.block-gestion {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  position: relative;
+}
+
+.block-text {
+  width: 50%;
+}
+
+.block-image {
+  width: 50%;
+}
+
+.block-image img {
+  width: 100%;
+}
+
+.container-bio {
+  max-width: 1250px;
+  margin: auto;
+}
+
+.category-gallery {
+  position: relative;
 }
