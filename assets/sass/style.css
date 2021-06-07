@@ -730,10 +730,18 @@ footer {
 
 .active {
   color: white !important;
+
+}
+
+.category-name {
+  display: flex;
+  width: 20%;
+  flex-wrap: wrap;
 }
 
 .category-name a {
   color: rgb(180, 180, 180);
+  margin-left: 10px;
 }
 
 .category-name {
