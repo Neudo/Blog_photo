@@ -1,14 +1,16 @@
-<div class="category-title vertical">
-  <h3><span class="green">A</span>ccroc</h3>
-  <h3><span class="green">M</span>acro <span class="green">P</span>hoto </h3>
+<div class="conatiner-category-name">
+  <div class="category-title vertical">
+    <h3><span class="green">A</span>ccroc</h3>
+    <h3><span class="green">M</span>acro <span class="green">P</span>hoto </h3>
+  </div>
+  
+    <p class="category-name">
+      <a href="#flowers">Fleurs</a> /
+      <a href="#insects">Insectes</a>
+      <a href="#water">Eau</a> /
+      <a href="#paint">Peinture</a>
+    </p>
 </div>
-
-  <p class="category-name">
-    <a href="#flowers">Fleurs</a> /
-    <a href="#insects">Insectes</a> 
-    <a href="#water">Eau</a> /
-    <a href="#paint">Peinture</a>
-  </p>
 
 <div class="container-gallery">
 

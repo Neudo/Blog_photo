@@ -1,7 +1,7 @@
 <div class="container-bio">
   <h1 class="title">EN SAVOIR <span class="green more-about">+</span> SUR MOI</h1>
   
-  <div class="block-gestion">
+  <div class="block-gestion mt">
     <div class="block-text">
     <h3>Originaire d’Alsace, je suis un photographe amateur et je pratique mon « vrai métier » plutôt en milieu urbain, en contact avec beaucoup de monde tout au long de la semaine et arrive le week-end, je délaisse l’effervescence du monde des humains pour m’immerger dans le monde de la <span class="green">nature</span>, du <span class="green">silence</span>, de la <span class="green">sérénité</span>. </h3>
     </div>

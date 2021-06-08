@@ -2,14 +2,19 @@
 <h2 class="hook">Objecitf macro : pour plonger au coeur du détail</h2>
 
 <div class="container-categories-index">
+
         <?php foreach($categories as $category): ?>
             <article>
                 <div class="category">
+                <div class="hover-filtre"></div>
+                <div class="categories-infos">
+                <?= $category['description']; ?>
+                </div>
                     <a href="index.php?page=categories&category_id=<?= $category['id']; ?>">
-                        <img src="assets/img/categories/<?= $category['img'];?>" alt="<?=$category['name'];?>">
-                            <div class="card-category">
-                                <h2><?= $category['name']; ?></h2>
-                            </div>
+                    <img src="assets/img/categories/<?= $category['img'];?>" alt="<?=$category['name'];?>">
+                        <div class="card-category">
+                            <h3><?= $category['name']; ?></h3>
+                        </div>
                     </a>
                 </div>
             </article>
@@ -26,7 +31,7 @@
                 <a href="index.php?page=post&id=<?= $post['id']; ?>">
                     <div class="cadre-image" style="background-image: url('assets/img/posts/<?= $post['img'];?>" alt="<?=$post['title'];?>) '"></div> 
                         <div class="card-post">
-                            <h2><?= $post['title']; ?></h2>
+                            <h3><?= $post['title']; ?></h3>
                             <p><?= $post['summary']; ?></p>
                             <span><?= dateConverter($post['date']); ?></span>
                         </div>

@@ -1,9 +1,3 @@
-
-
-const categoName = document.querySelector('.category-name');
-const containerGallery = document.querySelector('.container-gallery');
-
-
 const categoLinks = document.querySelectorAll('.category-name > a')
 const categoryGalleries = document.querySelectorAll('.category-gallery')
 
@@ -33,4 +27,3 @@ const setActiveLink = (index) => {
   categoLinks.forEach((link) => link.classList.remove('active'))
   categoLinks[index].classList.add('active')
 }
-

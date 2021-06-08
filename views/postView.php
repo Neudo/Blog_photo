@@ -11,7 +11,7 @@
             <?php foreach($comments as $comment): ?>
               <article>
                 <div class="comment">
-                    <h2><?= $comment['author'] . dateConverter($post['date']); ?></h2>
+                    <h3><?= $comment['author'] . dateConverter($post['date']); ?></h3>
                         <p><?= $comment['content']; ?></p>
                 </div>
               </article>
