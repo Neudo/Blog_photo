@@ -5,18 +5,24 @@
   <div class="content"><?= $post['content']; ?></div>
 </div>
 
-  <a href="#">Commentaire : 4 </a>    <!--count le nb de commentaire-->
-    <div class="comment-section">
+<a href="#">Commentaires : 4 </a>    <!--count le nb de commentaire-->
+  <div class="comment-section">
     <?php if(count($comments) > 0): ?>
-            <?php foreach($comments as $comment): ?>
-              <article>
-                <div class="comment">
-                    <h3><?= $comment['author'] . dateConverter($post['date']); ?></h3>
-                        <p><?= $comment['content']; ?></p>
-                </div>
-              </article>
-            <?php endforeach; ?>
+      <?php foreach($comments as $comment): ?>
+          <article>
+            <div class="comment">
+                <h3><?= $comment['author']; ?> ( <?= dateConverter($post['date']) ; ?> )</h3>
+                    <p><?= $comment['content']; ?></p>
+            </div>
+          </article>
+      <?php endforeach; ?>
         <?php else: ?>
-            <p>Aucun commentaire pour le moment...</p>
+            <p>Aucun commentaire.</p>
         <?php endif; ?>
-    </div>
+
+<form class="form-comment" action="" method="POST">
+  <label for="content">Votre commentaire</label>
+  <textarea name="content" id="content" cols="93" rows="10"></textarea>
+<button>Envoyer</button>
+</form>
+</div>

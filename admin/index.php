@@ -26,6 +26,8 @@ if(isset($_GET['page'])){
       case 'users' : 
         require_once('controllers/usersController.php');
         break;
+      case 'comments' :
+        require_once('controllers/commentsController.php');
   
     }
 }

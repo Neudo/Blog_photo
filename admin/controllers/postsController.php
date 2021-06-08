@@ -80,7 +80,7 @@ if($action == "delete") {
   deletePost($_GET['id']);
 
     $_SESSION['message'] = "Suppression effectuée  !";
-    header('Location: index.php?page=posts&action=list');
+    header('Location: index.php?page=comments&action=list');
     exit;
 }
 

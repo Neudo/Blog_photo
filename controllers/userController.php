@@ -42,7 +42,10 @@ if($action == 'login') {
       else {  
         $_SESSION['user'] = [
           'pseudo' => $user['pseudo'],
+          'email' => $user['email'],
+          'bio' => $user['bio'],
           'is_admin' => $user['is_admin'],
+          'id' => $user['id']
         ];
 
         $_SESSION['message'] = '<span class="succes">Vous êtes bien connecté !</span>'; 
