@@ -2,12 +2,14 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <link href="./assets/sass/reset.css" rel="stylesheet">
         <link href="./assets/sass/admin.css" rel="stylesheet">
-
     </head>
     <body>
         <?php require_once ('partials/header.php'); ?>
-        <?php require_once ('partials/menu.php'); ?>
+        <?php if(isset($_GET['page'])):?>
+            <?php require_once ('partials/menu.php'); ?>
+        <?php endif; ?>
     
 
 

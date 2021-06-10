@@ -23,6 +23,12 @@
 <form class="form-comment" action="" method="POST">
   <label for="content">Votre commentaire</label>
   <textarea name="content" id="content" cols="93" rows="10"></textarea>
-<button>Envoyer</button>
+  <button>Envoyer</button>
+  <?php if(!empty($errors)): ?>
+            <h3>Erreur :</h3>
+            <?php foreach($errors as $error): ?>
+                <?= $error ?><br>
+            <?php endforeach; ?>
+        <?php endif; ?>
 </form>
 </div>

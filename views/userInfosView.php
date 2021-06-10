@@ -10,13 +10,13 @@
     <label for="email">Email</label><br>
     <input type="text" name="email" id="email" value="<?= $_SESSION['user']['email'];?>">
   
-    <label for="">Mot de passe</label><br>
+    <label for="password">Mot de passe</label><br>
     <input type="password" name="password" id="password" value="">
   
-    <label for="">Bio</label><br>
-    <textarea name="" id="bio" cols="30" rows="5"><?= $_SESSION['user']['pseudo'];?></textarea><br>
+    <label for="bio">Bio</label><br>
+    <textarea name="bio" id="bio" cols="30" rows="5"><?= $_SESSION['user']['bio'];?></textarea><br>
   
-    <button>Sauvegarder</button>
+    <button>Modifier</button>
   
   </form>
 

@@ -7,18 +7,6 @@
     $errors = [];
 
 
-    // if(isset($_GET['id'])){
-       
-
-    //     if(!empty($_POST)){
-    //         $content = $_POST['content'];
-    //         $userId = $_SESSION['user']['id'];
-    //     }
-    // }
-    // else{
-    // 	header('Location:index.php?page=404');
-    // 	exit;
-    // }
 
     if(!empty($_POST)) {
         $content = $_POST['content'];

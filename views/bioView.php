@@ -17,7 +17,7 @@
   
   <div class="block-text">
     <p>
-      <span class="sub-title">Cette passion a débutée par un cadeau, un compact ROLLEI XF 35</span> <br>
+      <span class="sub-title">Une passion</span> <br>
       Je devais avoir 12 ans. J’ai battu la campagne environnante autour de chez moi de longues années avec cet appareil. Plus tard, je l’ai remplacé par un <span class="green">NIKON F4S</span>. C’était le temps de l’argentique et je faisais essentiellement du paysage et un peu de macro. J’ai complètement arrêté la photographie pendant au moins 10 ans et c’est la peinture qui a pris le relais. Pour mon retour à la photo des années après, on était passé au numérique et <span class="green">j’ai découvert une toute autre façon d’appréhender la photographie</span>. Mais la pratique de la peinture avait laissé des traces et seule la macro me permettait de retrouver des sensations similaires. <br> <br>
   
       <span class="sub-title">Plus encore qu’en macro traditionnelle</span><br>
@@ -28,12 +28,9 @@
   
   <div class="block-gestion">
     <div class="block-text">
-      <span class="sub-title">
-        Je fréquente toujours les zones humides le long du Rhin
-      </span><br>
+      <span class="sub-title">Les zones humides le long du Rhin</span><br>
       pour être sûr d’y trouver des libellules mais j’ai rarement une idée précise en tête. Une fois le sujet repéré, le matériel mis en place, je regarde l’écran du boitier et <span class="green">je plonge littéralement dans une autre dimension</span>. Je découvre alors des détails et des graphismes insoupçonnés à l’œil nu et un univers infini s’ouvre à moi.
        C’est comme faire du paysage avec un 300 mm : on taille dans le sujet, on en prélève la <span class="green">quintessence</span>.
-    </p>
     </div>
     <div class="block-image">
     <img src="assets/img/various/bio-photo.jpg" alt="bio-photo">

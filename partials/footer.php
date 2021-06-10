@@ -14,11 +14,11 @@
 </div>
 
 <div class="newsletter m-50">
-  <h3>Inscrivez vous à la news letter</h3>
+  <h3>Restons en contact</h3>
   <form action="" method="POST">
-    <input class="input-newsletter" type="text" placeholder="email">
+    <input class="input-newsletter" type="text" placeholder="Votre adresse e-mail">
     <button class="button-newsletter">Envoyer</button>
   </form>
 </div>
 
-</footer> 
+</footer>

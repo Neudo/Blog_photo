@@ -6,22 +6,27 @@ body {
 
 a {
   text-decoration: none;
-  color: #64abb1;
+  color: black;
 }
 
 a:hover {
   color: yellow;
 }
 
-nav {
+.menu {
   display: flex;
   justify-content: center;
   margin: 20px;
 }
 
-nav a {
-  margin-right: 30px;
+.menu a {
   font-size: 30px;
+  height: 40px;
+  background: greenyellow;
+  padding: 40px;
+  text-align: center;
+  margin: 5px auto 50px;
+  min-width: 31%;
 }
 
 table {
@@ -58,10 +63,10 @@ h3 {
   color: yellow;
 }
 
-.nav-bar {
+.menu {
   display: flex;
   justify-content: space-between;
-  margin-top: 10%;
+  flex-wrap: wrap;
 }
 
 form {
@@ -96,4 +101,19 @@ button {
 h2 {
   text-align: center;
   margin-top: 180px;
+}
+
+nav a {
+  color: white;
+  font-size: 25px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px auto;
+  background-color: black;
+  padding: 30px;
+  width: 90%;
+  border-radius: 10px;
 }

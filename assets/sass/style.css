@@ -31,7 +31,10 @@ nav {
 
 .logo img {
   width: 10vw;
+}
 
+.logo img:hover {
+  opacity: 0.7;
 }
 
 .logo {
@@ -256,8 +259,13 @@ textarea {
 
 .sub-title {
   font-size: 45px;
-  margin-bottom: 15px;
 }
+
+.sub-title {
+  margin: 15px 0 15px;
+  display: block;
+}
+
 .img-bio {
   margin-left: 50%;
   position: relative;
@@ -309,13 +317,10 @@ textarea {
   left: 49%;
 }
 
-
-
 .container-404 {
   display: flex;
   width: 100%;
   cursor: default;
-
 }
 
 .text-404-1 {
@@ -598,7 +603,7 @@ h1, h2 {
 }
 
 .green {
-  color: #0A6B0A;
+  color: #486A0D;
 }
 
 .more-about {
@@ -642,7 +647,7 @@ h1, h2 {
 .post {
   padding: 0 12px;
   width: 50%;
-  
+  margin-bottom: 20px;
 }
 
 .content {
@@ -895,10 +900,13 @@ footer {
   width: 100%;
   align-items: center;
   position: relative;
+  margin-bottom: 60px;
 }
 
 .block-text {
   width: 50%;
+  padding: 20px;
+  font-size: 30px;
 }
 
 .block-image {
@@ -916,4 +924,88 @@ footer {
 
 .category-gallery {
   position: relative;
+}
+
+.block-text h3 {
+  font-size: 30px;
+}
+
+.burger {
+  width: 60px;
+  display: block;
+  cursor: pointer;
+  position: fixed;
+  top: 60px;
+  left: 50px;
+  z-index: 1;
+}
+
+.burger > div {
+  background-color: white;
+  height: 8px;
+  margin-bottom: 5px;
+  border-radius: 3px;
+  transition: transform 0.6s ease-out;
+}
+
+.cross > :nth-child(1) {
+  transform: translateY(11px) rotate(45deg);
+}
+
+.cross > :nth-child(2) {
+  transform: scaleX(0.1);
+  opacity: 0;
+}
+
+.cross > :nth-child(3) {
+  transform: translateY(-11px) rotate(-45deg);
+}
+
+
+@media (max-width: 1200px) {
+  nav {
+    display: none;
+  }
+
+  .logo-mobile img {
+    display: block;
+    margin: 50px auto;
+    width: 15%;
+  }
+
+  .hook {
+    position: absolute;
+    top: 45vh;
+    left: 5%;
+    font-size: 65px;
+  }
+
+  .container-categories-index, .container-latest-posts {
+    flex-direction: column;
+  }
+
+  .vertical {
+    writing-mode: initial;
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .container-latest-posts article {
+    padding-right: 0;
+    width: 100%;
+  }
+
+  .card-category h3 {
+    font-size: 80px;
+  }
+
+  .container-all-posts article {
+    flex-direction: column;
+    width: 100%;
+    margin: 150px auto 100px;
+    
+  }
+
+  
 }

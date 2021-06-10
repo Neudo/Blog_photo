@@ -112,15 +112,36 @@ if($action == 'register') {
 }
 
 if($action == 'edit') {
-  
+
+  if(!empty($_POST)){
+    $submittedPseudo = $_POST['pseudo'];
+    $submittedEmail = $_POST['email'];
+    $submittedPassword = $_POST['password'];
+    $submittedBio = $_POST['bio'];
+
+    var_dump($_POST);
+
+    if(empty($submittedPseudo)) {
+      $errors[] =  'merci de renseigner un Pseudo.';
+    }
+    if(empty($submittedEmail)) {  
+      $errors[] = 'merci de renseigner une adresse email.';
+    }
+    elseif(!checkEmailFormat($submittedEmail)){
+      $errors[] = 'merci d\'enter une email valide.';
+    } 
+    if(empty($submittedPassword)) {
+      $errors[] = 'merci de renseigner un mot de passe.';
+    }
+
+    if(empty($errors)){
+      $editUser = updateUser($userId, $data);
+    }
+  }
 
 
   $view = 'views/userInfosView.php';
 
-}
-
-if($action == 'choose') {
-  $view = 'views/userView.php';
 }
 
 ?>

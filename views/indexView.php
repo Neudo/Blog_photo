@@ -6,10 +6,6 @@
         <?php foreach($categories as $category): ?>
             <article>
                 <div class="category">
-                <div class="hover-filtre"></div>
-                <div class="categories-infos">
-                <?= $category['description']; ?>
-                </div>
                     <a href="index.php?page=categories&category_id=<?= $category['id']; ?>">
                     <img src="assets/img/categories/<?= $category['img'];?>" alt="<?=$category['name'];?>">
                         <div class="card-category">

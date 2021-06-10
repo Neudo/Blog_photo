@@ -1,14 +1,25 @@
 
 <?php
 
+// function getAllPosts(){
+//     global $db;
+//     $query = $db->query("SELECT * 
+//     FROM posts
+//     ORDER BY date DESC ");
+//     $posts = $query->fetchAll();
+//     return $posts;
+// }
+
 function getAllPosts(){
-    global $db;
-    $query = $db->query("SELECT *
-    FROM posts
-    ORDER BY date DESC ");
-    $posts = $query->fetchAll();
-    return $posts;
-}
+    $db = $GLOBALS['db'] ;
+    $query = $db->query("SELECT p.*, GROUP_CONCAT(c.name SEPARATOR ' / ') AS category_id
+    FROM posts p
+    JOIN categories_posts cp ON p.id = cp.post_id
+    JOIN categories c ON cp.category_id = c.id
+    GROUP BY p.id
+    ORDER BY p.date DESC");
+    return 	$query->fetchAll();
+  }
 
 function getLatestPosts(){
     global $db;
