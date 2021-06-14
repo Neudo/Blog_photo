@@ -5,21 +5,23 @@
     require_once ('models/Comment.php');
 
     $errors = [];
+    $userNotLogged = true;
 
 
+        if(!empty($_POST && $userNotLogged == false)) {
+            $content = $_POST['content'];
+            $userId = $_SESSION['user']['id'];
+            $postId = $_GET['id'];
 
-    if(!empty($_POST)) {
-        $content = $_POST['content'];
-        $userId = $_SESSION['user']['id'];
-        $postId = $_GET['id'];
-
-
-        if(empty($content)){
-            $errors[] = "Veuillez saisir un commentaire.";
-        }
-
-        if(empty($errors)){
-            $postComment = addComment($content, $postId, $userId);
+            if(empty($content)){
+                $errors[] = "Veuillez saisir un commentaire.";
+            }
+            if(empty($errors)){
+                $postComment = addComment($content, $postId, $userId);
+            }
+            
+        elseif(!empty($_POST && $userNotLogged == true)) {
+            $errors[] = "Merci de vous connecter pour écrire un commentaire";
         }
     }
 

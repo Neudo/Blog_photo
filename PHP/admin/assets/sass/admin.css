@@ -128,7 +128,7 @@ nav {
   }
 
   table {
-    width: 50%;
+    width: 100%;
   }
 
   form {
@@ -139,4 +139,5 @@ nav {
     width: 40%;
     margin: 50px auto;
   }
+  
 }

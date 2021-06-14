@@ -1,4 +1,4 @@
-<!-- <footer>
+<footer>
 <div class="container-social m-50">
   <a href="#"><img src="assets/img/various/icon-twitter.png" alt=""></a>
   <a href="#" class="white-box"><img src="assets/img/various/icon-instagram.png" alt=""></a>
@@ -18,4 +18,4 @@
   </form>
 </div>
 
-</footer> -->
+</footer>
